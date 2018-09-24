@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta name="viewport"content="width=device-width,intial-scale=1.0">
+	<style >
+	{margin: 0px;
+padding: 0px;}
+body
+{
+background-image: url("img2.jpg");
+	background-size:cover;
+	padding-top:50px;
+	text-align: center;
+	background-position: center;
+background-opacity:10%;
+position: relative;
+}
+.values{display: inline-block;}
+</style>
+	<script>
+		</script>
+	</head>
+
+<body>
+
+	<div>
+		<h1  style="font-size:80px;color: white;font-family:Century Gothic;border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;border-left-width:30px;border-right-width:30px;border-color: white;"><center>Want to do some calculation..so Let's Go</center>
+</h1>
+	<input id="n1">
+
+<select id="operator">
+	<option value="+">+</option>
+	<option value="-">-</option>
+	<option value="*">*</option>
+	<option value="/">/</option>
+</select> 
+<input id="n2"><br><br>
+<button id="btn">=</button>
+
+<input type="text" id="result">
+ <input type="reset" id="reset" value="Reset">
+<script>
+	var i1=document.getElementById('reset').addEventListener("click",clear);
+	var i = document.getElementById("btn").addEventListener("click", calculate);
+		function calculate() {
+			var n1 =parseInt(document.getElementById('n1').value);
+			var n2 = parseInt(document.getElementById('n2').value);
+			var operator = document.getElementById('operator').value;
+			// body...
+		
+		if (operator == '+') 
+
+		{
+			document.getElementById('result').value=n1+n2;
+		}
+		if (operator == '-') 
+		{
+
+			document.getElementById('result').value=n1-n2;
+		}
+		if (operator =='/') 
+		{
+			document.getElementById('result').value=n1/n2;
+		}
+		if (operator =='*') 
+		{
+			document.getElementById('result').value=n1*n2;
+		}
+	}
+	function clear(){
+		document.getElementById('n1').value="";
+		document.getElementById('n2').value="";
+		document.getElementById('result').value="";
+	}
+	</script>
+</body>
+</html`
